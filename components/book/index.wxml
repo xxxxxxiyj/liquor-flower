@@ -1,0 +1,9 @@
+<!--components/book/index.wxml-->
+<view bind:tap="onTap" class="container">
+  <image class="book-image" src="{{book.image}}" />
+  <view class="description">
+    <text class="title">{{book.title}}</text>
+    <text class="author">{{book.author}}</text>
+    <text class="like-num">{{book.fav_nums}} 喜欢</text>
+  </view>
+</view>

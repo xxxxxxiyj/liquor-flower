@@ -1,0 +1,5 @@
+var transIndex = function (index) {
+  return index < 10 ? '0' + index : index
+}
+
+module.exports.transIndex = transIndex

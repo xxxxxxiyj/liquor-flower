@@ -1,0 +1,8 @@
+var formatText = function (text) {
+  if(!text) return
+  var reg = getRegExp('\\\\n', 'g')  // '\\'代表'\',所以为什么不是'\\n'而是'\\\\n'??
+  var text = text.replace(reg, '\n')
+  return text
+}
+
+module.exports.formatText = formatText

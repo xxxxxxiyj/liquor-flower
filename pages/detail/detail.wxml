@@ -1,0 +1,34 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view class="head">
+    <image src="{{bookInfo.image}}" />
+    <text class="title">{{bookInfo.title}}</text>
+    <text class="author">{{bookInfo.author}}</text>
+  </view>
+
+  <view class="sub-container">
+    <text class="sub-title">内容简介</text>
+    <wxs src="detail.wxs" module="util" />
+    <text class="content">{{util.formatText(bookInfo.summary)}}</text>
+  </view>
+
+  <view class="sub-container">
+    <text class="sub-title">书本信息</text>
+    <view class="detail-container">
+      <view class="vertical description">
+        <text>出版社</text>
+        <text>出版年</text>
+        <text>页数</text>
+        <text>定价</text>
+        <text>装帧</text>
+      </view>
+      <view class="vertical">
+        <text>{{bookInfo.publisher}}</text>
+        <text>{{bookInfo.pubdate}}</text>
+        <text>{{bookInfo.pages}}</text>
+        <text>{{bookInfo.price}}</text>
+        <text>{{bookInfo.binding}}</text>
+      </view>
+    </view>
+  </view>
+</view>

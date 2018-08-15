@@ -1,0 +1,7 @@
+<!--components/classic/music/music.wxml-->
+<view class="container">
+  <image class="disc-img" src="{{img}}" />
+  <image class="player" src="images/player_waitting.png" />
+  <image class="tag" src="{{music}}" />
+  <view class="content">{{content}}</view>
+</view>

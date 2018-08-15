@@ -1,0 +1,24 @@
+/* components/classic/periodical/index.wxss */
+.container {
+  display: inline-flex;
+  flex-direction: row;
+  align-items:flex-end;
+  font-size: 28rpx;
+}
+.num {
+  font-size: 58rpx;
+  line-height: 58rpx;
+  font-weight: 600;
+}
+.gap {
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  font-size: 52rpx;
+  font-weight: 100;
+}
+.date {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10rpx;
+  font-size: 24rpx;
+}

@@ -1,0 +1,11 @@
+<!--components/classic/periodical/index.wxml-->
+<view class="container">
+  <text>No.</text>
+  <wxs src="./index.wxs" module="trans" />
+  <text class="num">{{trans.transIndex(index)}}</text>
+  <text class="gap">|</text>
+  <view class="date">
+    <text>{{month}}</text>
+    <text>{{year}}</text>
+  </view>
+</view>

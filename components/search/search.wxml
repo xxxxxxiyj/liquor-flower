@@ -1,0 +1,6 @@
+<!--components/search/search.wxml-->
+<view class="container">
+  <view>
+    <input type="text" />
+  </view>
+</view>

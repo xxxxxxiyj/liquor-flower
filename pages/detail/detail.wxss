@@ -1,0 +1,71 @@
+/* pages/detail/detail.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+  width: 100%;
+  background-color: #fff;
+}
+.head image {
+  width: 200rpx;
+  height: 300rpx;
+  box-shadow: 2px 2px 3px #ccc;
+}
+.title {
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  font-size: 38rpx;
+  font-weight: 600;
+  color: #2f2f2f;
+}
+.author {
+  font-size: 28rpx;
+  color: #999;
+}
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30rpx;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.sub-title {
+  margin-bottom: 20rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #2f2f2f;
+}
+.content {
+  font-size: 32rpx;
+  line-height: 40rpx;
+  text-indent: 64rpx;
+  color: #000;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 100rpx;
+  width: 100%;
+  font-size: 28rpx;
+  color: #666;
+}
+.vertical {
+  display: flex;
+  flex-direction: column;
+}
+.description {
+  margin-right: 30rpx;
+  color: #999;
+}
