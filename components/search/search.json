@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "v-book": "../book/index"
+    "v-book": "../book/index",
+    "v-tag": "../tag/index"
   }
 }

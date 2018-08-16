@@ -26,7 +26,6 @@ Page({
     this.setData({
       searchPanel: true
     })
-    console.log(this.data.searchPanel)
   },
   onCancel: function() {
     this.setData({

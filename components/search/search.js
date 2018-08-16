@@ -17,14 +17,18 @@ Component({
    * 组件的初始数据
    */
   data: {
+    historyKey: [],
     hotKeyword: [],
     finished: false,
-    books: []
+    books: [],
+    val: ''
   },
 
   attached: function () {
+    this.setData({
+      historyKey: searchModel.getHistoryKey()  
+    })
     searchModel.getHotKeyword((res) => {
-      console.log(res)
       this.setData({
         hotKeyword: res.hot
       })
@@ -38,11 +42,18 @@ Component({
     onCancel: function() {
       this.triggerEvent('cancel')
     },
-    onConfirm: function(event) {
+    onDelete: function() {
       this.setData({
-        finished: true
+        finished: false,
+        val: ''
       })
-      let val = event.detail.value
+    },
+    onConfirm: function(event) {
+      let val = event.detail.value || event.detail.text
+      this.setData({
+        finished: true,
+        val: val
+      })
       http.request({
         url: '/book/search',
         data: {
@@ -50,12 +61,13 @@ Component({
           q: val
         },
         success: (res) => {
-          console.log(res)
+          // console.log(res)
           this.setData({
             books: res.books
           })
         }
       })
+      searchModel.addHistoryKey(val)
     }
   }
 })

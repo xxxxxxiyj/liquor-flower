@@ -23,6 +23,9 @@
 }
 .title {
   font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .author {
   width: 100%;
