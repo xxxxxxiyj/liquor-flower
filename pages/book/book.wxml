@@ -1,15 +1,18 @@
 <!--pages/book/book.wxml-->
-<view class="container">
-  <view class="header">
-    <view class="search">
-      <image class="icon-search" src="/images/book/search.png" />
-      <text class="search-title">搜索书籍</text>
+<view>
+  <view class="container" wx:if="{{!searchPanel}}">
+    <view class="header">
+      <view class="search" bind:tap="onSearch">
+        <image class="icon-search" src="/images/book/search.png" />
+        <text class="search-title">搜索书籍</text>
+      </view>
+    </view>
+    <view class="sub-container">
+      <image class="title-img" src="/images/book/quality.png" />
+      <view class="book-container">
+        <v-book wx:for="{{books}}" wx:key="{{index}}" book="{{item}}" />
+      </view>
     </view>
   </view>
-  <view class="sub-container">
-    <image class="title-img" src="/images/book/quality.png" />
-    <view class="book-container">
-      <v-book wx:for="{{books}}" wx:key="{{index}}" book="{{item}}" />
-    </view>
-  </view>
+  <v-search wx:if="{{searchPanel}}" bind:cancel="onCancel" />
 </view>

@@ -1,7 +1,4 @@
 /* pages/book/book.wxss */
-.container {
-
-}
 .header {
   position: fixed;
   top: 0;

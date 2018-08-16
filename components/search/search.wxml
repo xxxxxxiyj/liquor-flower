@@ -1,6 +1,28 @@
 <!--components/search/search.wxml-->
 <view class="container">
-  <view>
-    <input type="text" />
+  <view class="header">
+    <view class="search-container">
+      <image class="icon icon-search" src="images/search.png"/>
+      <input type="text" placeholder='书籍名' placeholder-class='in-search-bar' class="search-bar" bind:confirm="onConfirm" confirm-type="done" focus />
+      <image class="icon icon-cancel" src="images/cancel.png" />
+    </view>
+    <view class="cancel" bind:tap="onCancel">取消</view>
+  </view>
+  <view class="content" wx:if="{{!finished}}">
+    <view class="history">
+      <view class="title">历史搜索</view>
+      <view class="tags">
+        <text class="tag-item" wx:for="{{hotKeyword}}" wx:key="{{index}}">{{item}}</text>
+      </view>
+    </view>
+    <view class="hot-search">
+      <view class="title">热门搜索</view>
+      <view class="tags">
+        <text class="tag-item" wx:for="{{hotKeyword}}" wx:key="{{index}}">{{item}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="book-container" wx:if="{{finished}}">
+    <v-book wx:for="{{books}}" wx:key="{{index}}" book="{{item}}" />
   </view>
 </view>

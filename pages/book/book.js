@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    books: null
+    books: Object,
+    searchPanel: false
   },
 
   /**
@@ -19,6 +20,17 @@ Page({
       this.setData({
         books: res
       })
+    })
+  },
+  onSearch: function () {
+    this.setData({
+      searchPanel: true
+    })
+    console.log(this.data.searchPanel)
+  },
+  onCancel: function() {
+    this.setData({
+      searchPanel: false
     })
   },
 
