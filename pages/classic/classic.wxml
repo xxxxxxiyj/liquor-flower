@@ -7,7 +7,7 @@
     </view>
   </view>
   <v-movie img="{{classicData.image}}" content="{{classicData.content}}" wx:if="{{classicData.type==100}}" />
-  <v-music img="{{classicData.image}}" content="{{classicData.content}}" wx:if="{{classicData.type==200}}" />
+  <v-music img="{{classicData.image}}" content="{{classicData.content}}" src="{{classicData.url}}" wx:if="{{classicData.type==200}}" />
   <v-essay img="{{classicData.image}}" content="{{classicData.content}}" wx:if="{{classicData.type==300}}" />
   <v-turn class="page-nav" bind:left="onNext" bind:right="onPrevious" last="{{last}}" first="{{first}}" title="{{classicData.title}}" />
 </view>

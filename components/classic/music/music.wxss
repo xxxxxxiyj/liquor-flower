@@ -29,3 +29,15 @@
   max-width: 500rpx;
   font-size: 36rpx;
 }
+.rotation {
+  transform: rotate(360deg);
+  animation: rotation 12s linear infinite
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

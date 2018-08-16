@@ -21,6 +21,7 @@ Page({
    */
   onLoad: function (options) {
     classicModel.getLatest((res) => {
+      this._getLikeStatus(res.id, res.type)
       // console.log(res)
       this.setData({
         classicData: res
@@ -33,15 +34,14 @@ Page({
   },
   onNext: function() {
     this._updateClassic('next')
-    this._getLikeStatus()
   },
   onPrevious: function() {
     this._updateClassic('previous')
-    this._getLikeStatus()
   },
   _updateClassic: function(nextOrPrevious) {
     let index = this.data.classicData.index
     classicModel.getClassic(index, nextOrPrevious, (res) => {
+      this._getLikeStatus(res.id, res.type)
       this.setData({
         classicData: res,
         first: classicModel.isFirst(res.index),
@@ -49,8 +49,9 @@ Page({
       })
     })
   },
-  _getLikeStatus() {
-    likeModel.getClassicLikeStatus(this.data.classicData.id, this.data.classicData.type, (res) => {
+  // 获取喜欢状态，喜欢状态不可直接从缓存中读取
+  _getLikeStatus(id, type) {
+    likeModel.getClassicLikeStatus(id, type, (res) => {
       this.setData({
         likeStatus: res
       })

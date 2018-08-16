@@ -18,7 +18,7 @@ class LikeModel extends HTTP {
 
   getClassicLikeStatus(artID, artType, callback) {
     this.request({
-      url: 'classic/${artType}/${artID}/favor',
+      url: `classic/${artType}/${artID}/favor`,
       success: (res) => {
         callback(res)
       }
