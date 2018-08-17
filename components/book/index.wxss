@@ -13,7 +13,6 @@
   bottom: 0;
   padding: 15rpx 8rpx 8rpx 15rpx;
   width: 239rpx;
-  height: 120rpx;
   font-size: 22rpx;
   border-bottom-right-radius: 5rpx;
   border-top-right-radius: 5rpx;
@@ -28,6 +27,8 @@
   white-space: nowrap;
 }
 .author {
+  display: block;
+  margin-top: 8rpx;
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -38,5 +39,6 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 3rpx;
+  margin-bottom: 5rpx;
   color: #666;
 }

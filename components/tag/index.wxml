@@ -1,4 +1,4 @@
 <!--components/tag/index.wxml-->
 <view class="container" bind:tap="onTap">
-  <text>{{text}}</text>
+  <text class="item">{{text}}</text>
 </view>

@@ -1,5 +1,6 @@
 /* components/tag/index.wxss */
-text {
+.item {
+  display: inline-block;
   padding: 4rpx 12rpx;
   margin: 10rpx 15rpx;
   font-size: 28rpx;

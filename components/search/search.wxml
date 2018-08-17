@@ -13,7 +13,7 @@
     <view class="history">
       <view class="title">历史搜索</view>
       <view class="tags">
-        <text class="tag-item" wx:for="{{historyKey}}" wx:key="{{index}}" bind:tapping="onConfirm">{{item}}</text>
+        <v-tag wx:for="{{historyKey}}" wx:key="{{index}}" text="{{item}}" bind:confirm="onConfirm" />
       </view>
     </view>
     <view class="hot-search">
@@ -24,6 +24,8 @@
     </view>
   </view>
   <view class="book-container" wx:if="{{finished}}">
-    <v-book wx:for="{{books}}" wx:key="{{index}}" book="{{item}}" />
+    <v-book wx:for="{{books}}" wx:key="{{index}}" book="{{item}}" showLike="{{false}}" />
   </view>
+  <text wx:if="{{empty}}" class="empty-tip">没有搜索到相关书籍</text>
 </view>
+

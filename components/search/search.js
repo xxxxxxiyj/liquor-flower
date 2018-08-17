@@ -20,6 +20,7 @@ Component({
     historyKey: [],
     hotKeyword: [],
     finished: false,
+    empty: false,
     books: [],
     val: ''
   },
@@ -61,10 +62,15 @@ Component({
           q: val
         },
         success: (res) => {
-          // console.log(res)
+          console.log(res)
           this.setData({
             books: res.books
           })
+          if(res.count == 0) {
+            this.setData({
+              empty: true
+            })
+          }
         }
       })
       searchModel.addHistoryKey(val)
