@@ -20,9 +20,29 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
+  },
+  onPreview: function(event) {
+    console.log(event)
+    wx.navigateTo({
+      url: '../classic-detail/classic-detail?id=' + event.detail.id + '&type=' + event.detail.type
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
     wx.getSetting({
       success: (res) => {
-        if(res.authSetting['scope.userInfo']) {
+        if (res.authSetting['scope.userInfo']) {
           wx.getUserInfo({
             success: (res) => {
               this.setData({
@@ -43,26 +63,6 @@ Page({
         count: res.count
       })
     })
-  },
-  onPreview: function(event) {
-    console.log(event)
-    wx.navigateTo({
-      url: '../classic-detail/classic-detail?id=' + event.detail.id + '&type=' + event.detail.type
-    })
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
   },
 
   /**

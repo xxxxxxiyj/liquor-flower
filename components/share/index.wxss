@@ -1,6 +1,6 @@
 /* components/share/share.wxss */
 .share-btn {
-  position: initial;
+  position: relative;
   display: inline-block;
   padding: 0;
   border: none !important;

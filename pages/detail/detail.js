@@ -1,6 +1,10 @@
 // pages/detail/detail.js
 import {BookModel} from '../../models/book.js'
+import {LikeModel} from '../../models/like.js'
+
 let bookModel = new BookModel
+let likeModel = new LikeModel
+
 Page({
 
   /**
@@ -26,6 +30,10 @@ Page({
         likeInfo: res
       })
     })
+  },
+  onLike: function(event) {
+    let behaviour = event.detail.behaviour
+    likeModel.like(behaviour, this.data.bookInfo.id, 400)
   },
 
   /**
