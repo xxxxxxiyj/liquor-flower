@@ -23,13 +23,11 @@ Page({
     wx.getSetting({
       success: (res) => {
         if(res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用getUserInfo获取头像昵称
           wx.getUserInfo({
             success: (res) => {
               this.setData({
                 userInfo: res.userInfo
               })
-              console.log(res)
             }
           })
         }
@@ -64,7 +62,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    
   },
 
   /**

@@ -3,8 +3,8 @@
   <view class="header">
     <image class="bg-img" src="/images/my/my_bg.png" />
     <view class="avatar-container">
-      <image src="{{userInfo}}" />
-      <open-data type="userAvatarUrl" class="avatar" />
+      <image src="{{userInfo.avatarUrl}}" class="avatar" />
+      <!-- <open-data type="userAvatarUrl" class="avatar"></open-data> -->
     </view>
     <view class="about-like">
       <view class="about item">
@@ -12,7 +12,7 @@
         <text class="sub-title">关于我们</text>
       </view>
       <view class="like item">
-        <text>{{count}}</text>
+        <text class="like-num">{{count}}</text>
         <text class="sub-title">喜欢的书</text>
       </view>
     </view>
