@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    bookInfo: null
+    bookInfo: null,
+    likeInfo: false
   },
 
   /**
@@ -18,6 +19,11 @@ Page({
     bookModel.getDetail(options.id, (res) => {
       this.setData({
         bookInfo: res
+      })
+    })
+    bookModel.getLikeStatus(options.id, (res) => {
+      this.setData({
+        likeInfo: res
       })
     })
   },

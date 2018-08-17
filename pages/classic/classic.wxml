@@ -4,6 +4,7 @@
     <v-periodical class="periodical" index="{{classicData.index}}"/>
     <view class="like-share">
       <v-like bind:like="onLike" isLiked="{{likeStatus.like_status}}" count="{{likeStatus.fav_nums}}" />
+      <v-share class="share-cmp" />
     </view>
   </view>
   <v-movie img="{{classicData.image}}" content="{{classicData.content}}" wx:if="{{classicData.type==100}}" />

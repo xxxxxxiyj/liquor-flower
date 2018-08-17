@@ -31,4 +31,11 @@
       </view>
     </view>
   </view>
+  <view class="comment-container">
+    <input class="comment-input" type="text" placeholder='输入短评' />
+    <view class="like-share">
+      <v-like class="like-cmp" isLiked="{{likeInfo.like_status}}" count="{{likeInfo.fav_nums}}" />
+      <v-share class="share-cmp" />
+    </view>
+  </view>
 </view>

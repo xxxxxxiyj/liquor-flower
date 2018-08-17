@@ -13,7 +13,14 @@
   margin-left: 20rpx;
 }
 .like-share {
-  margin-right: 20rpx;
+  display: flex;
+  align-items: center;
+  margin-right: 30rpx;
+  margin-top: 12rpx;
+}
+.share-cmp {
+  display: inline-block;
+  margin-left: 25rpx;
 }
 .page-nav {
   position: absolute;

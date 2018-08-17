@@ -24,6 +24,15 @@ class BookModel extends HTTP {
       }
     })
   }
+
+  getLikeStatus(id, callback) {
+    this.request({
+      url: `/book/${id}/favor`,
+      success: (res) => {
+        callback(res)
+      }
+    })
+  }
 }
 
 export { BookModel }
