@@ -28,6 +28,23 @@ class ClassicModel extends HTTP {
     } 
   }
 
+  getFavor(callback) {
+    this.request({
+      url: '/classic/favor',
+      success: (res) => {
+        callback(res)
+      }
+    })
+  }
+  getDetail(artId, artType, callback) {
+    this.request({
+      url: `/classic/${artType}/${artId}`,
+      success: (res) => {
+        callback(res)
+      }
+    })
+  }
+
   isFirst(index) {
     return index == 1
   }

@@ -1,0 +1,13 @@
+<!--pages/classic-detail/classic-detail.wxml-->
+<view class="container">
+  <view class="header">
+    <v-periodical class="periodical" index="{{classicData.index}}"/>
+    <view class="like-share">
+      <v-like bind:like="onLike" isLiked="{{classicData.like_status}}" count="{{classicData.fav_nums}}" />
+    </view>
+  </view>
+  <v-movie img="{{classicData.image}}" content="{{classicData.content}}" wx:if="{{classicData.type==100}}" />
+  <v-music img="{{classicData.image}}" content="{{classicData.content}}" src="{{classicData.url}}" wx:if="{{classicData.type==200}}" />
+  <v-essay img="{{classicData.image}}" content="{{classicData.content}}" wx:if="{{classicData.type==300}}" />
+</view>
+

@@ -1,0 +1,5 @@
+var transType = function (type) {
+  return type == '100' ? '电影' : (type == '200' ? '音乐' : '句子')
+}
+
+module.exports.transType = transType

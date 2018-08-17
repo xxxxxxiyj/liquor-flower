@@ -1,0 +1,26 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+  <view class="header">
+    <image class="bg-img" src="/images/my/my_bg.png" />
+    <view class="avatar-container">
+      <image src="{{userInfo}}" />
+      <open-data type="userAvatarUrl" class="avatar" />
+    </view>
+    <view class="about-like">
+      <view class="about item">
+        <image class="about-icon" src="/images/my/about.png" />
+        <text class="sub-title">关于我们</text>
+      </view>
+      <view class="like item">
+        <text>{{count}}</text>
+        <text class="sub-title">喜欢的书</text>
+      </view>
+    </view>
+  </view>
+  <view class="like-content">
+    <image class="head-title" src="/images/my/like.png" />
+    <view class="pre-container">
+      <v-pre wx:for="{{likeData}}" wx:key="{{index}}" preview="{{item}}" bind:predetail="onPreview" />
+    </view>
+  </view>
+</view>

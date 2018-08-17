@@ -4,12 +4,9 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    isLiked: {
-      type: Boolean
-    },
-    count: {
-      type: Number
-    }
+    isLiked: Boolean,
+    count: Number,
+    readOnly: Boolean
   },
 
   /**
@@ -27,6 +24,9 @@ Component({
     onLike: function(event) {
       let liked = this.properties.isLiked
       let count = this.properties.count
+      if(this.properties.readOnly) {
+        return
+      }
       // console.log(liked)
       this.setData({
         isLiked: !liked,

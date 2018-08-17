@@ -1,0 +1,10 @@
+<!--components/preview/index.wxml-->
+<view class="container" bind:tap="onTap">
+  <view class="title">
+    <wxs src="./index.wxs" module="tag" />
+    <v-tag text="{{tag.transType(preview.type)}}" />
+    <v-like read-only="{{true}}" count="{{preview.fav_nums}}" isLiked="true" />
+  </view>
+  <image class="{{preview.type == '200' ? 'music-img' : 'img'}}" src="{{preview.image}}" />
+  <view class="content">{{preview.content}}</view>
+</view>
