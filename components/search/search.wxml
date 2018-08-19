@@ -26,6 +26,8 @@
   <view class="book-container" wx:if="{{finished}}">
     <v-book wx:for="{{books}}" wx:key="{{index}}" book="{{item}}" showLike="{{false}}" />
   </view>
+  <v-loading class="loading" wx:if="{{loading}}" />
+  <v-loading class="loading-center" wx:if="{{loadingCenter}}" />
   <text wx:if="{{empty}}" class="empty-tip">没有搜索到相关书籍</text>
 </view>
 
