@@ -11,7 +11,8 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    src: String
+    src: String,
+    title: String
   },
 
   /**
@@ -36,6 +37,7 @@ Component({
     onPlay: function() {
       if (!this.data.playing) {
         musicMgr.src = this.properties.src
+        musicMgr.title = this.properties.title
         this.setData({
           playing: true
         })

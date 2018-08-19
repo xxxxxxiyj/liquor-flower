@@ -4,7 +4,7 @@
     <view class="search-container">
       <image class="icon icon-search" src="images/search.png"/>
       <input type="text" placeholder='书籍名' placeholder-class='in-search-bar' value="{{val}}"
-        class="search-bar" bind:confirm="onConfirm" confirm-type="done" focus />
+        class="search-bar" bind:confirm="onConfirm" confirm-type="done" confirm-type="search" focus />
       <image class="icon icon-cancel" bind:tap="onDelete" src="images/cancel.png" />
     </view>
     <view class="cancel" bind:tap="onCancel">取消</view>

@@ -32,7 +32,7 @@
     </view>
   </view>
   <view class="comment-container">
-    <input class="comment-input" type="text" placeholder='输入短评' />
+    <input class="comment-input" type="text" placeholder='输入短评(暂不可用)' disabled />
     <view class="like-share">
       <v-like class="like-cmp" bind:like="onLike" isLiked="{{likeInfo.like_status}}" count="{{likeInfo.fav_nums}}" />
       <v-share class="share-cmp" />
