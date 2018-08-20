@@ -1,11 +1,11 @@
 /* components/share/share.wxss */
 .share-btn {
-  position: relative;
-  display: inline-block;
-  padding: 0;
-  border: none !important;
-  line-height: 35rpx;
-  background-color: #fff !important;
+  /* padding: 0;
+  border: none !important; */
+  /* line-height: 35rpx;
+  background-color: #fff !important; */
+  padding: 0 !important;
+  border:none !important;
 }
 .share-icon {
   width: 40rpx;

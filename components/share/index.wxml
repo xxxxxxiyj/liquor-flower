@@ -1,4 +1,5 @@
 <!--components/share/share.wxml-->
-<button class="share-btn" open-type="share">
+<button class="share-btn" open-type="share" plain="{{true}}">
+  <!-- <slot name="img"></slot> -->
   <image class="share-icon" src="../../images/icon/share.png" />
 </button>
