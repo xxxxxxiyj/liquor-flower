@@ -96,6 +96,7 @@
   align-items: center;
 }
 .share-cmp {
+  margin-top: 13rpx;
   margin-left: 22rpx;
   margin-right: 35rpx;
   font-size: 0;
