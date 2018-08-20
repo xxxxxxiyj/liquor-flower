@@ -1,5 +1,5 @@
-<view class="container">
-  <image class="movie-img" src="{{img}}" />
-  <image class="tag" src="{{movie}}"/>
-  <text class="content">{{content}}</text>
+<view class="classic-container">
+  <image class="classic-img" src="{{img}}" />
+  <image class="classic-tag" src="{{movie}}"/>
+  <text class="classic-content">{{content}}</text>
 </view>

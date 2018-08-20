@@ -1,6 +1,6 @@
 <!--components/classic/essay/index.wxml-->
-<view class="container">
-  <image class="essay-img" src="{{img}}" />
-  <image class="tag" src="{{essay}}"/>
-  <text class="content">{{content}}</text>
+<view class="classic-container">
+  <image class="classic-img" src="{{img}}" />
+  <image class="classic-tag" src="{{essay}}"/>
+  <text class="classic-content">{{content}}</text>
 </view>
