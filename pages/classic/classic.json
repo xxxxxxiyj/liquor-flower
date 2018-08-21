@@ -1,4 +1,6 @@
 {
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
   "usingComponents": {
     "v-periodical": "/components/periodical/index",
     "v-like": "/components/like/index",

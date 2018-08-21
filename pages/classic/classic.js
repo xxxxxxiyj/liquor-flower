@@ -61,7 +61,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
@@ -89,7 +89,21 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    wx.showNavigationBarLoading()
+    wx.startPullDownRefresh({
+      success: (err) => {
+        let artId = this.data.classicData.id
+        let artType = this.data.classicData.type
+        classicModel.getDetail(artId, artType, (res) => {
+          this.setData({
+            classicData: res
+          })
+          wx.setStorageSync(`classic-${artId}`, res)
+        })
+      }
+    })
+    wx.hideNavigationBarLoading() //完成停止加载
+    wx.stopPullDownRefresh() //停止下拉刷新
   },
 
   /**

@@ -7,11 +7,13 @@ class ClassicModel extends HTTP {
       url: '/classic/latest',
       success: (res) => {
         callback(res)
+        console.log(res)
         wx.setStorageSync('lastIndex', res.index)
       }
     })
   }
 
+  // index: 当前页面id 
   getClassic(index, nextOrPrevious, callback) {
     let key = nextOrPrevious == 'next' ? this._getKey(index + 1) : this._getKey(index - 1)
     let classic = wx.getStorageSync(key)
