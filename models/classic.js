@@ -7,7 +7,6 @@ class ClassicModel extends HTTP {
       url: '/classic/latest',
       success: (res) => {
         callback(res)
-        console.log(res)
         wx.setStorageSync('lastIndex', res.index)
       }
     })

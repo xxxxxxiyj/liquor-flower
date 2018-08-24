@@ -22,7 +22,6 @@ Page({
   onLoad: function (options) {
     classicModel.getLatest((res) => {
       this._getLikeStatus(res.id, res.type)
-      // console.log(res)
       this.setData({
         classicData: res
       })

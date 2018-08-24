@@ -9,7 +9,7 @@
   <view class="sub-container">
     <text class="sub-title">内容简介</text>
     <wxs src="detail.wxs" module="util" />
-    <text class="content">{{util.formatText(bookInfo.summary)}}</text>
+    <text decode="{{true}}" class="content">{{util.formatText(bookInfo.summary)}}</text>
   </view>
 
   <view class="sub-container">
