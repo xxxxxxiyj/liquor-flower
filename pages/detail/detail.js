@@ -27,7 +27,7 @@ Page({
       })
     })
     bookModel.getComment(options.id, (res) => {
-      console.log(res)
+      // console.log(res)
       this.setData({
         comment: res.comments
       })
