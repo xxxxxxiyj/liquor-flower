@@ -12,7 +12,8 @@ Page({
    */
   data: {
     bookInfo: null,
-    likeInfo: false
+    comment: [],
+    likeInfo: null
   },
 
   /**
@@ -24,6 +25,13 @@ Page({
       this.setData({
         bookInfo: res
       })
+    })
+    bookModel.getComment(options.id, (res) => {
+      console.log(res)
+      this.setData({
+        comment: res.comments
+      })
+      console.log(this.data.comment)
     })
     bookModel.getLikeStatus(options.id, (res) => {
       this.setData({

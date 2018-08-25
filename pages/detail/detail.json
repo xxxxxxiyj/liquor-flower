@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "v-like": "/components/like/index",
-    "v-share": "/components/share/index"
+    "v-share": "/components/share/index",
+    "v-tag": "/components/tag/index"
   }
 }

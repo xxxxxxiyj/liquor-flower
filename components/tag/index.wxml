@@ -1,4 +1,5 @@
 <!--components/tag/index.wxml-->
 <view class="container" bind:tap="onTap">
   <text class="item">{{text}}</text>
+  <slot name="nums"></slot>
 </view>

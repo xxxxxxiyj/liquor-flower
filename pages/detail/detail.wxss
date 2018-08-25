@@ -69,6 +69,15 @@
   margin-right: 30rpx;
   color: #999;
 }
+.comments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.nums {
+  margin-left: 8rpx;
+  font-size: 22rpx;
+}
 .comment-container {
   position: fixed;
   bottom: 0;

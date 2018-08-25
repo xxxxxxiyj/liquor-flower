@@ -13,6 +13,15 @@
   </view>
 
   <view class="sub-container">
+    <text class="sub-title">短评</text>
+    <view class="comments">
+      <v-tag wx:for="{{comment}}" wx:key="{{index}}" text="{{item.content}}">
+        <text slot="nums" class="nums">+{{item.nums}}</text>
+      </v-tag>
+    </view>
+  </view>
+
+  <view class="sub-container">
     <text class="sub-title">书本信息</text>
     <view class="detail-container">
       <view class="vertical description">
